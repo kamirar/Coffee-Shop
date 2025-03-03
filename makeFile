@@ -1,0 +1,11 @@
+run_simulation: simulation.cpp shopQueue.o customer.h
+	g++ -Wall -g simulation.cpp shopQueue.o -o run_simulation
+
+shopQueue.o: shopQueue.cpp shopQueue.h
+	g++ -Wall -c shopQueue.cpp
+
+all:
+	run_simulation
+
+clean:
+	rm -rf shopQueue.o
